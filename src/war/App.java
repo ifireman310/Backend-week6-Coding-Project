@@ -18,9 +18,12 @@ public class App {
 		
 		// Deal the cars to each player
 		System.out.println("Dealing the cards...");
-		for (int i = 0; i < 26; i++) {
-			player1.draw(deck);
-			player2.draw(deck);
+		for (int i = 0; i < 52; i++) {
+			if (i % 2 == 0) {
+				player1.draw(deck);
+			} else {
+				player2.draw(deck);
+			}
 		}
 		
 		System.out.println("Player 1: " + player1.getName());
