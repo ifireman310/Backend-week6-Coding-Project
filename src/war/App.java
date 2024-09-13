@@ -1,13 +1,11 @@
 package war;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class App {
 
 	public static void main(String[] args) {
 		
 		// Instantiate a new deck of cards
+		System.out.println("Grabbing a new deck...");
 		Deck deck = new Deck();
 		
 		// Instantiate two new players
@@ -15,13 +13,18 @@ public class App {
 		Player player2 = new Player("Gabi");
 		
 		// Shuffle the deck of cards
+		System.out.println("Shuffling the deck...");
 		deck.shuffle();
 		
+		// Deal the cars to each player
+		System.out.println("Dealing the cards...");
 		for (int i = 0; i < 26; i++) {
 			player1.draw(deck);
 			player2.draw(deck);
 		}
 		
+		System.out.println("Player 1: " + player1.getName());
+		System.out.println("Player 2: " + player2.getName());
 		
 		System.out.println("\n\nLet the games begin!");
 		
